@@ -31,6 +31,7 @@ Partial Class fmKaraoke
         Me.txtValue = New System.Windows.Forms.TextBox()
         Me.Panel1 = New System.Windows.Forms.Panel()
         CType(Me.picKaraoke, System.ComponentModel.ISupportInitialize).BeginInit()
+        Me.Panel1.SuspendLayout()
         Me.SuspendLayout()
         '
         'picKaraoke
@@ -45,49 +46,67 @@ Partial Class fmKaraoke
         '
         'lblHeading
         '
-        Me.lblHeading.AutoSize = True
-        Me.lblHeading.Location = New System.Drawing.Point(626, 52)
+        Me.lblHeading.Font = New System.Drawing.Font("Cooper Black", 18.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.lblHeading.ForeColor = System.Drawing.Color.White
+        Me.lblHeading.Location = New System.Drawing.Point(80, 41)
         Me.lblHeading.Name = "lblHeading"
-        Me.lblHeading.Size = New System.Drawing.Size(51, 17)
+        Me.lblHeading.Size = New System.Drawing.Size(363, 51)
         Me.lblHeading.TabIndex = 1
-        Me.lblHeading.Text = "Label1"
+        Me.lblHeading.Text = "Karaoke Night Rental"
+        Me.lblHeading.TextAlign = System.Drawing.ContentAlignment.MiddleCenter
         '
         'lblInstructions
         '
-        Me.lblInstructions.AutoSize = True
-        Me.lblInstructions.Location = New System.Drawing.Point(626, 230)
+        Me.lblInstructions.BackColor = System.Drawing.Color.Black
+        Me.lblInstructions.Font = New System.Drawing.Font("Cooper Black", 14.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.lblInstructions.ForeColor = System.Drawing.Color.White
+        Me.lblInstructions.Location = New System.Drawing.Point(47, 218)
         Me.lblInstructions.Name = "lblInstructions"
-        Me.lblInstructions.Size = New System.Drawing.Size(51, 17)
+        Me.lblInstructions.Size = New System.Drawing.Size(429, 62)
         Me.lblInstructions.TabIndex = 2
-        Me.lblInstructions.Text = "Label2"
+        Me.lblInstructions.Text = "Please enter the number of xxxx"
+        Me.lblInstructions.TextAlign = System.Drawing.ContentAlignment.MiddleCenter
         '
         'cboSelectionAction
         '
+        Me.cboSelectionAction.Font = New System.Drawing.Font("Georgia", 14.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.cboSelectionAction.FormattingEnabled = True
-        Me.cboSelectionAction.Location = New System.Drawing.Point(597, 143)
+        Me.cboSelectionAction.Items.AddRange(New Object() {"Rent $2.99 Per Song", "Rent $8.99 Per Hour"})
+        Me.cboSelectionAction.Location = New System.Drawing.Point(131, 138)
         Me.cboSelectionAction.Name = "cboSelectionAction"
-        Me.cboSelectionAction.Size = New System.Drawing.Size(121, 24)
+        Me.cboSelectionAction.Size = New System.Drawing.Size(260, 35)
         Me.cboSelectionAction.TabIndex = 3
+        Me.cboSelectionAction.Text = "Rental Selection"
         '
         'lblTotalCost
         '
-        Me.lblTotalCost.AutoSize = True
-        Me.lblTotalCost.Location = New System.Drawing.Point(626, 429)
+        Me.lblTotalCost.Font = New System.Drawing.Font("Cooper Black", 14.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.lblTotalCost.ForeColor = System.Drawing.Color.White
+        Me.lblTotalCost.Location = New System.Drawing.Point(125, 431)
         Me.lblTotalCost.Name = "lblTotalCost"
-        Me.lblTotalCost.Size = New System.Drawing.Size(51, 17)
+        Me.lblTotalCost.Size = New System.Drawing.Size(272, 61)
         Me.lblTotalCost.TabIndex = 4
-        Me.lblTotalCost.Text = "Label3"
+        Me.lblTotalCost.Text = "$XXXXXX"
+        Me.lblTotalCost.TextAlign = System.Drawing.ContentAlignment.MiddleCenter
         '
         'txtValue
         '
-        Me.txtValue.Location = New System.Drawing.Point(597, 310)
+        Me.txtValue.Font = New System.Drawing.Font("Georgia", 14.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.txtValue.Location = New System.Drawing.Point(227, 319)
         Me.txtValue.Name = "txtValue"
-        Me.txtValue.Size = New System.Drawing.Size(100, 22)
+        Me.txtValue.Size = New System.Drawing.Size(69, 34)
         Me.txtValue.TabIndex = 5
+        Me.txtValue.Text = "XX"
+        Me.txtValue.TextAlign = System.Windows.Forms.HorizontalAlignment.Center
         '
         'Panel1
         '
         Me.Panel1.BackColor = System.Drawing.Color.Black
+        Me.Panel1.Controls.Add(Me.txtValue)
+        Me.Panel1.Controls.Add(Me.lblHeading)
+        Me.Panel1.Controls.Add(Me.cboSelectionAction)
+        Me.Panel1.Controls.Add(Me.lblTotalCost)
+        Me.Panel1.Controls.Add(Me.lblInstructions)
         Me.Panel1.Location = New System.Drawing.Point(396, -2)
         Me.Panel1.Name = "Panel1"
         Me.Panel1.Size = New System.Drawing.Size(526, 557)
@@ -98,19 +117,15 @@ Partial Class fmKaraoke
         Me.AutoScaleDimensions = New System.Drawing.SizeF(8.0!, 16.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.ClientSize = New System.Drawing.Size(919, 547)
-        Me.Controls.Add(Me.txtValue)
-        Me.Controls.Add(Me.lblTotalCost)
-        Me.Controls.Add(Me.cboSelectionAction)
-        Me.Controls.Add(Me.lblInstructions)
-        Me.Controls.Add(Me.lblHeading)
         Me.Controls.Add(Me.Panel1)
         Me.Controls.Add(Me.picKaraoke)
         Me.Name = "fmKaraoke"
         Me.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen
         Me.Text = "Karaoke Night Rental"
         CType(Me.picKaraoke, System.ComponentModel.ISupportInitialize).EndInit()
+        Me.Panel1.ResumeLayout(False)
+        Me.Panel1.PerformLayout()
         Me.ResumeLayout(False)
-        Me.PerformLayout()
 
     End Sub
 
