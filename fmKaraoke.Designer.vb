@@ -30,6 +30,8 @@ Partial Class fmKaraoke
         Me.lblTotalCost = New System.Windows.Forms.Label()
         Me.txtValue = New System.Windows.Forms.TextBox()
         Me.Panel1 = New System.Windows.Forms.Panel()
+        Me.btnValue = New System.Windows.Forms.Button()
+        Me.btnClear = New System.Windows.Forms.Button()
         CType(Me.picKaraoke, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.Panel1.SuspendLayout()
         Me.SuspendLayout()
@@ -72,9 +74,9 @@ Partial Class fmKaraoke
         Me.cboSelectionAction.Font = New System.Drawing.Font("Georgia", 14.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.cboSelectionAction.FormattingEnabled = True
         Me.cboSelectionAction.Items.AddRange(New Object() {"Rent $2.99 Per Song", "Rent $8.99 Per Hour"})
-        Me.cboSelectionAction.Location = New System.Drawing.Point(131, 138)
+        Me.cboSelectionAction.Location = New System.Drawing.Point(96, 137)
         Me.cboSelectionAction.Name = "cboSelectionAction"
-        Me.cboSelectionAction.Size = New System.Drawing.Size(260, 35)
+        Me.cboSelectionAction.Size = New System.Drawing.Size(330, 35)
         Me.cboSelectionAction.TabIndex = 3
         Me.cboSelectionAction.Text = "Rental Selection"
         '
@@ -82,7 +84,7 @@ Partial Class fmKaraoke
         '
         Me.lblTotalCost.Font = New System.Drawing.Font("Cooper Black", 14.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.lblTotalCost.ForeColor = System.Drawing.Color.White
-        Me.lblTotalCost.Location = New System.Drawing.Point(125, 431)
+        Me.lblTotalCost.Location = New System.Drawing.Point(126, 459)
         Me.lblTotalCost.Name = "lblTotalCost"
         Me.lblTotalCost.Size = New System.Drawing.Size(272, 61)
         Me.lblTotalCost.TabIndex = 4
@@ -102,6 +104,8 @@ Partial Class fmKaraoke
         'Panel1
         '
         Me.Panel1.BackColor = System.Drawing.Color.Black
+        Me.Panel1.Controls.Add(Me.btnClear)
+        Me.Panel1.Controls.Add(Me.btnValue)
         Me.Panel1.Controls.Add(Me.txtValue)
         Me.Panel1.Controls.Add(Me.lblHeading)
         Me.Panel1.Controls.Add(Me.cboSelectionAction)
@@ -112,10 +116,36 @@ Partial Class fmKaraoke
         Me.Panel1.Size = New System.Drawing.Size(526, 557)
         Me.Panel1.TabIndex = 6
         '
+        'btnValue
+        '
+        Me.btnValue.BackColor = System.Drawing.Color.LightGray
+        Me.btnValue.FlatStyle = System.Windows.Forms.FlatStyle.Flat
+        Me.btnValue.Font = New System.Drawing.Font("Georgia", 14.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.btnValue.Location = New System.Drawing.Point(61, 390)
+        Me.btnValue.Name = "btnValue"
+        Me.btnValue.Size = New System.Drawing.Size(173, 51)
+        Me.btnValue.TabIndex = 6
+        Me.btnValue.Text = "Calculate"
+        Me.btnValue.UseVisualStyleBackColor = False
+        '
+        'btnClear
+        '
+        Me.btnClear.BackColor = System.Drawing.Color.LightGray
+        Me.btnClear.FlatStyle = System.Windows.Forms.FlatStyle.Flat
+        Me.btnClear.Font = New System.Drawing.Font("Georgia", 14.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.btnClear.Location = New System.Drawing.Point(298, 390)
+        Me.btnClear.Name = "btnClear"
+        Me.btnClear.Size = New System.Drawing.Size(173, 51)
+        Me.btnClear.TabIndex = 7
+        Me.btnClear.Text = "Clear"
+        Me.btnClear.UseVisualStyleBackColor = False
+        '
         'fmKaraoke
         '
+        Me.AcceptButton = Me.btnValue
         Me.AutoScaleDimensions = New System.Drawing.SizeF(8.0!, 16.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
+        Me.CancelButton = Me.btnClear
         Me.ClientSize = New System.Drawing.Size(919, 547)
         Me.Controls.Add(Me.Panel1)
         Me.Controls.Add(Me.picKaraoke)
@@ -136,4 +166,6 @@ Partial Class fmKaraoke
     Friend WithEvents lblTotalCost As Label
     Friend WithEvents txtValue As TextBox
     Friend WithEvents Panel1 As Panel
+    Friend WithEvents btnClear As Button
+    Friend WithEvents btnValue As Button
 End Class
