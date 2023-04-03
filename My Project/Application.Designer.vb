@@ -32,12 +32,12 @@ Namespace My
         
         <Global.System.Diagnostics.DebuggerStepThroughAttribute()>  _
         Protected Overrides Sub OnCreateMainForm()
-            Me.MainForm = Global.WeeklyAssgn7_KaraokeNight.Form1
+            Me.MainForm = Global.WeeklyAssgn7_KaraokeNight.frmKaraoke
         End Sub
         
         <Global.System.Diagnostics.DebuggerStepThroughAttribute()>  _
         Protected Overrides Sub OnCreateSplashScreen()
-            Me.SplashScreen = Global.WeeklyAssgn7_KaraokeNight.SplashScreen1
+            Me.SplashScreen = Global.WeeklyAssgn7_KaraokeNight.frmSplash
         End Sub
     End Class
 End Namespace
