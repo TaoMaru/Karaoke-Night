@@ -21,13 +21,15 @@
         '
         '    Version.Text = System.String.Format(Version.Text, My.Application.Info.Version.Major, My.Application.Info.Version.Minor, My.Application.Info.Version.Build, My.Application.Info.Version.Revision)
 
+        lblVersion.Text = System.String.Format(lblVersion.Text, My.Application.Info.Version.Major, My.Application.Info.Version.Minor)
 
+        lblCopyright.Text = "Copyright"
 
 
 
     End Sub
 
-    Private Sub Version_Click(sender As Object, e As EventArgs)
 
-    End Sub
+
+
 End Class
