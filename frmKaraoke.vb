@@ -51,6 +51,9 @@ Public Class frmKaraoke
             intInputValue = Convert.ToInt32(strInputValue)
             If intInputValue > 0 Then
                 isValid = True
+            Else
+                alert = MsgBox("Please enter a positive number.", vbOKOnly, "Invalid Input")
+                ClearForm()
             End If
         Catch notNumeric As FormatException
             alert = MsgBox("Please enter a positive number.", vbOKOnly, "Invalid Input")
@@ -109,11 +112,18 @@ Public Class frmKaraoke
         Dim strCostOutput As String = "Your total cost is: {0}"
         If cboSelectionAction.SelectedIndex = 0 Then
             decCost = CalculateCostBySong()
-            strCost = decCost.ToString("C2")
-        Else
+            If decCost > 0 Then
+                strCost = decCost.ToString("C2")
+                lblTotalCost.Text = String.Format(strCostOutput, strCost)
+            End If
+        ElseIf cboSelectionAction.SelectedIndex = 1 Then
             decCost = CalculateCostByHour()
-            strCost = decCost.ToString("C2")
+            If decCost > 0 Then
+                strCost = decCost.ToString("C2")
+                lblTotalCost.Text = String.Format(strCostOutput, strCost)
+            End If
+        Else
+                lblTotalCost.Text = ""
         End If
-        lblTotalCost.Text = String.Format(strCostOutput, strCost)
     End Sub
 End Class
