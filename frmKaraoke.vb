@@ -26,7 +26,7 @@ Public Class frmKaraoke
         cboSelectionAction.Text = "Select Rental Type:" ' reset cboSelection
         lblTotalCost.Text = "" ' reset totalCost text
         lblInstructions.Text = "" ' rest instructions text
-        txtValue.Focus() ' reset focus
+        cboSelectionAction.Focus() ' reset focus
     End Sub
 
     Private Sub ClearText()
@@ -48,8 +48,10 @@ Public Class frmKaraoke
         Select Case intRentalType
             Case 0
                 BySong() ' display rental per song instructions
+                txtValue.Focus() 'focus on text field
             Case 1
                 ByHour() ' display rental by hour instructions
+                txtValue.Focus() 'focus on text field
         End Select
 
     End Sub
@@ -74,6 +76,10 @@ Public Class frmKaraoke
             MsgBox("Please enter a positive number.", vbOKOnly, "Invalid Input")
             isValid = False
             ClearText() 'reset txtBox
+        Catch txtOverflow As OverflowException
+            'input is likely too large & no longer practical
+            MsgBox("Please check your input and try again.", vbOKOnly, "Input Error")
+            ClearText() ' reset txtBox
         End Try
         Return isValid
     End Function
@@ -102,10 +108,17 @@ Public Class frmKaraoke
         'convert input to int and calculate total cost
         If validInput Then
             intValue = Convert.ToInt32(strValue)
-            decTotalCost = intValue * _cdecSongRate
+            decTotalCost = GetSongTotalCost(intValue)
             Return decTotalCost
         End If
         Return decTotalCost
+    End Function
+
+    Private Function GetSongTotalCost(ByVal numSongs As Integer) As Decimal
+        'handles the product of input number of songs and the rental per song rate
+        Dim decSongCost As Decimal ' rental per song cost
+        decSongCost = numSongs * _cdecSongRate
+        Return decSongCost
     End Function
 
     Private Function CalculateCostByHour() As Decimal
@@ -120,10 +133,17 @@ Public Class frmKaraoke
         ' convert input to int and calculate total cost
         If validInput Then
             intValue = Convert.ToInt32(strValue)
-            decTotalCost = intValue * _cdecHourlyRate
+            decTotalCost = GetHourlyTotalCost(intValue)
             Return decTotalCost
         End If
         Return decTotalCost
+    End Function
+
+    Private Function GetHourlyTotalCost(ByVal numHours As Integer) As Decimal
+        ' calculates the product of input number of hours and the hourly rate
+        Dim decHourlyCost As Decimal ' hourly total cost
+        decHourlyCost = numHours * _cdecHourlyRate
+        Return decHourlyCost
     End Function
 
     Private Sub btnValue_Click(sender As Object, e As EventArgs) Handles btnValue.Click
