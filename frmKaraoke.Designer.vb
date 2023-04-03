@@ -50,9 +50,9 @@ Partial Class frmKaraoke
         '
         Me.lblHeading.Font = New System.Drawing.Font("Cooper Black", 18.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.lblHeading.ForeColor = System.Drawing.Color.White
-        Me.lblHeading.Location = New System.Drawing.Point(80, 41)
+        Me.lblHeading.Location = New System.Drawing.Point(41, 41)
         Me.lblHeading.Name = "lblHeading"
-        Me.lblHeading.Size = New System.Drawing.Size(363, 51)
+        Me.lblHeading.Size = New System.Drawing.Size(440, 51)
         Me.lblHeading.TabIndex = 1
         Me.lblHeading.Text = "Karaoke Night Rental"
         Me.lblHeading.TextAlign = System.Drawing.ContentAlignment.MiddleCenter
@@ -60,11 +60,11 @@ Partial Class frmKaraoke
         'lblInstructions
         '
         Me.lblInstructions.BackColor = System.Drawing.Color.Black
-        Me.lblInstructions.Font = New System.Drawing.Font("Cooper Black", 14.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.lblInstructions.Font = New System.Drawing.Font("Cooper Black", 16.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.lblInstructions.ForeColor = System.Drawing.Color.White
-        Me.lblInstructions.Location = New System.Drawing.Point(47, 218)
+        Me.lblInstructions.Location = New System.Drawing.Point(86, 218)
         Me.lblInstructions.Name = "lblInstructions"
-        Me.lblInstructions.Size = New System.Drawing.Size(429, 62)
+        Me.lblInstructions.Size = New System.Drawing.Size(351, 62)
         Me.lblInstructions.TabIndex = 2
         Me.lblInstructions.Text = "Please enter the number of xxxx"
         Me.lblInstructions.TextAlign = System.Drawing.ContentAlignment.MiddleCenter
@@ -73,12 +73,12 @@ Partial Class frmKaraoke
         '
         Me.cboSelectionAction.Font = New System.Drawing.Font("Georgia", 14.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.cboSelectionAction.FormattingEnabled = True
-        Me.cboSelectionAction.Items.AddRange(New Object() {"Rent $2.99 Per Song", "Rent $8.99 Per Hour"})
+        Me.cboSelectionAction.Items.AddRange(New Object() {"Rent for $2.99 / Song", "Rent for $8.99 / Hour"})
         Me.cboSelectionAction.Location = New System.Drawing.Point(96, 137)
         Me.cboSelectionAction.Name = "cboSelectionAction"
         Me.cboSelectionAction.Size = New System.Drawing.Size(330, 35)
         Me.cboSelectionAction.TabIndex = 3
-        Me.cboSelectionAction.Text = "Select Rental Type"
+        Me.cboSelectionAction.Text = "Select Rental Type:"
         '
         'lblTotalCost
         '

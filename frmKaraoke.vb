@@ -19,7 +19,7 @@ Public Class frmKaraoke
 
     Private Sub ClearForm()
         txtValue.Text = ""
-        cboSelectionAction.SelectedIndex = 0
+        cboSelectionAction.Text = "Select Rental Type:"
         lblTotalCost.Text = ""
         lblInstructions.Text = ""
         txtValue.Focus()
@@ -55,6 +55,7 @@ Public Class frmKaraoke
         Catch notNumeric As FormatException
             alert = MsgBox("Please enter a positive number.", vbOKOnly, "Invalid Input")
             isValid = False
+            ClearForm()
         End Try
         Return isValid
     End Function

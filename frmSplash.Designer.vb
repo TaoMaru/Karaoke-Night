@@ -34,7 +34,7 @@ Partial Class frmSplash
         Me.Label1.Font = New System.Drawing.Font("Cooper Black", 26.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.Label1.Location = New System.Drawing.Point(405, 310)
         Me.Label1.Name = "Label1"
-        Me.Label1.Size = New System.Drawing.Size(372, 84)
+        Me.Label1.Size = New System.Drawing.Size(451, 84)
         Me.Label1.TabIndex = 0
         Me.Label1.Text = "Karaoke Night"
         Me.Label1.TextAlign = System.Drawing.ContentAlignment.MiddleLeft
