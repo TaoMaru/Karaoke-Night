@@ -4,6 +4,9 @@
 ' Purpose: This app lets users choose a karaoke room rental type and calculate their total cost
 ''          Users select to rent per song or sent a room by hour, and their cost is displayed
 
+Option Strict On
+Option Explicit On
+
 Public Class frmKaraoke
 
     ' declare constant program variables:
@@ -49,20 +52,20 @@ Public Class frmKaraoke
         ' handles input validation: uses exception handler to check if input is numeric
         Dim isValid As Boolean = False ' indicates valid input
         Dim intInputValue As Integer ' holds user input from txtValue
-        Dim alert ' msgBox
+
         Try
             intInputValue = Convert.ToInt32(strInputValue)
             If intInputValue > 0 Then ' input is a number greater than 0, & is valid
                 isValid = True
             Else
                 ' input not greater than 0, present error msg
-                alert = MsgBox("Please enter a positive number.", vbOKOnly, "Invalid Input")
+                MsgBox("Please enter a positive number.", vbOKOnly, "Invalid Input")
                 isValid = False
                 ClearForm() ' reset form
             End If
         Catch notNumeric As FormatException
             'input is not numeric, present error msg
-            alert = MsgBox("Please enter a positive number.", vbOKOnly, "Invalid Input")
+            MsgBox("Please enter a positive number.", vbOKOnly, "Invalid Input")
             isValid = False
             ClearForm() 'reset form
         End Try
