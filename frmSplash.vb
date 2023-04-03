@@ -23,7 +23,7 @@
 
         lblVersion.Text = System.String.Format(lblVersion.Text, My.Application.Info.Version.Major, My.Application.Info.Version.Minor)
 
-        lblCopyright.Text = "Copyright"
+        lblCopyright.Text = "Copyright © 2019"
 
 
 

@@ -78,7 +78,7 @@ Partial Class frmKaraoke
         Me.cboSelectionAction.Name = "cboSelectionAction"
         Me.cboSelectionAction.Size = New System.Drawing.Size(330, 35)
         Me.cboSelectionAction.TabIndex = 3
-        Me.cboSelectionAction.Text = "Rental Selection"
+        Me.cboSelectionAction.Text = "Select Rental Type"
         '
         'lblTotalCost
         '
