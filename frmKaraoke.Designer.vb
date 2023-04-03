@@ -30,8 +30,8 @@ Partial Class frmKaraoke
         Me.lblTotalCost = New System.Windows.Forms.Label()
         Me.txtValue = New System.Windows.Forms.TextBox()
         Me.Panel1 = New System.Windows.Forms.Panel()
-        Me.btnValue = New System.Windows.Forms.Button()
         Me.btnClear = New System.Windows.Forms.Button()
+        Me.btnValue = New System.Windows.Forms.Button()
         CType(Me.picKaraoke, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.Panel1.SuspendLayout()
         Me.SuspendLayout()
@@ -116,6 +116,19 @@ Partial Class frmKaraoke
         Me.Panel1.Size = New System.Drawing.Size(526, 557)
         Me.Panel1.TabIndex = 6
         '
+        'btnClear
+        '
+        Me.btnClear.BackColor = System.Drawing.Color.LightGray
+        Me.btnClear.DialogResult = System.Windows.Forms.DialogResult.Cancel
+        Me.btnClear.FlatStyle = System.Windows.Forms.FlatStyle.Flat
+        Me.btnClear.Font = New System.Drawing.Font("Georgia", 14.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.btnClear.Location = New System.Drawing.Point(298, 390)
+        Me.btnClear.Name = "btnClear"
+        Me.btnClear.Size = New System.Drawing.Size(173, 51)
+        Me.btnClear.TabIndex = 7
+        Me.btnClear.Text = "Clear"
+        Me.btnClear.UseVisualStyleBackColor = False
+        '
         'btnValue
         '
         Me.btnValue.BackColor = System.Drawing.Color.LightGray
@@ -128,19 +141,7 @@ Partial Class frmKaraoke
         Me.btnValue.Text = "Calculate"
         Me.btnValue.UseVisualStyleBackColor = False
         '
-        'btnClear
-        '
-        Me.btnClear.BackColor = System.Drawing.Color.LightGray
-        Me.btnClear.FlatStyle = System.Windows.Forms.FlatStyle.Flat
-        Me.btnClear.Font = New System.Drawing.Font("Georgia", 14.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.btnClear.Location = New System.Drawing.Point(298, 390)
-        Me.btnClear.Name = "btnClear"
-        Me.btnClear.Size = New System.Drawing.Size(173, 51)
-        Me.btnClear.TabIndex = 7
-        Me.btnClear.Text = "Clear"
-        Me.btnClear.UseVisualStyleBackColor = False
-        '
-        'fmKaraoke
+        'frmKaraoke
         '
         Me.AcceptButton = Me.btnValue
         Me.AutoScaleDimensions = New System.Drawing.SizeF(8.0!, 16.0!)
@@ -149,7 +150,7 @@ Partial Class frmKaraoke
         Me.ClientSize = New System.Drawing.Size(919, 547)
         Me.Controls.Add(Me.Panel1)
         Me.Controls.Add(Me.picKaraoke)
-        Me.Name = "fmKaraoke"
+        Me.Name = "frmKaraoke"
         Me.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen
         Me.Text = "Karaoke Night Rental"
         CType(Me.picKaraoke, System.ComponentModel.ISupportInitialize).EndInit()
