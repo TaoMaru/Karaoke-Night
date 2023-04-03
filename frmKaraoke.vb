@@ -27,12 +27,27 @@ Public Class frmKaraoke
         lblTotalCost.Text = "" ' reset totalCost text
         lblInstructions.Text = "" ' rest instructions text
         cboSelectionAction.Focus() ' reset focus
+        HideFields()
     End Sub
 
     Private Sub ClearText()
         'resets just the txtValue text box & rests focus
         txtValue.Text = ""
         txtValue.Focus()
+    End Sub
+
+    Private Sub HideFields()
+        'hides btns & txtBox
+        btnValue.Visible = False
+        btnClear.Visible = False
+        txtValue.Visible = False
+    End Sub
+
+    Private Sub ShowFields()
+        'reveals btns & txtBox
+        btnValue.Visible = True
+        btnClear.Visible = True
+        txtValue.Visible = True
     End Sub
 
     Private Sub btnClear_Click(sender As Object, e As EventArgs) Handles btnClear.Click
@@ -49,9 +64,11 @@ Public Class frmKaraoke
             Case 0
                 BySong() ' display rental per song instructions
                 txtValue.Focus() 'focus on text field
+                ShowFields()
             Case 1
                 ByHour() ' display rental by hour instructions
                 txtValue.Focus() 'focus on text field
+                ShowFields()
         End Select
 
     End Sub
