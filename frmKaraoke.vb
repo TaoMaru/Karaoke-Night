@@ -29,6 +29,12 @@ Public Class frmKaraoke
         txtValue.Focus() ' reset focus
     End Sub
 
+    Private Sub ClearText()
+        'resets just the txtValue text box & rests focus
+        txtValue.Text = ""
+        txtValue.Focus()
+    End Sub
+
     Private Sub btnClear_Click(sender As Object, e As EventArgs) Handles btnClear.Click
         ' uses clearForm call to reset the form fields
         ClearForm()
@@ -61,13 +67,13 @@ Public Class frmKaraoke
                 ' input not greater than 0, present error msg
                 MsgBox("Please enter a positive number.", vbOKOnly, "Invalid Input")
                 isValid = False
-                ClearForm() ' reset form
+                ClearText() ' reset txtBox
             End If
         Catch notNumeric As FormatException
             'input is not numeric, present error msg
             MsgBox("Please enter a positive number.", vbOKOnly, "Invalid Input")
             isValid = False
-            ClearForm() 'reset form
+            ClearText() 'reset txtBox
         End Try
         Return isValid
     End Function
