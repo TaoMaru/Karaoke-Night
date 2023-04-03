@@ -2,7 +2,9 @@
 ' Developer: Maria Jackson
 ' Date: April 3, 2023
 ' Purpose: This app lets users choose a karaoke room rental type and calculate their total cost
-''          Users select to rent per song or sent a room by hour, and their cost is displayed
+''          Users select to rent per song or rent a room by hour, and their cost is displayed
+''          Utilizes procudures to create a modular program flow for calculating cost, hiding &
+''          displaying form components/fields, and changing what is displayed to the user.
 
 Option Strict On
 Option Explicit On
@@ -27,7 +29,7 @@ Public Class frmKaraoke
         lblTotalCost.Text = "" ' reset totalCost text
         lblInstructions.Text = "" ' rest instructions text
         cboSelectionAction.Focus() ' reset focus
-        HideFields()
+        HideFields() ' hide txtBox and btns
     End Sub
 
     Private Sub ClearText()
@@ -48,6 +50,7 @@ Public Class frmKaraoke
         btnValue.Visible = True
         btnClear.Visible = True
         txtValue.Visible = True
+        txtValue.Focus()
     End Sub
 
     Private Sub btnClear_Click(sender As Object, e As EventArgs) Handles btnClear.Click
@@ -63,12 +66,10 @@ Public Class frmKaraoke
         Select Case intRentalType
             Case 0
                 BySong() ' display rental per song instructions
-                txtValue.Focus() 'focus on text field
-                ShowFields()
+                ShowFields() 'display txtBox and btns
             Case 1
                 ByHour() ' display rental by hour instructions
-                txtValue.Focus() 'focus on text field
-                ShowFields()
+                ShowFields() 'display txtBox and btns
         End Select
 
     End Sub
